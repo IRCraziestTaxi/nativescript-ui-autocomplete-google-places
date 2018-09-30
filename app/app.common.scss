@@ -1,0 +1,19 @@
+// Variables
+// UIKit variables
+// @import "~uikit/src/scss/variables-theme";
+// @import "~uikit/src/scss/mixins-theme"; // Causes errors and likely isn't used anyway.
+// NativeScript variables
+@import "~nativescript-theme-core/scss/dark";
+
+// Variable overrides
+
+
+// Main theme
+// UIKit
+// @import "~uikit/src/scss/uikit-theme";
+// Nativescript
+@import "~nativescript-theme-core/scss/index";
+
+.elt-wide {
+    width: 100%;
+}

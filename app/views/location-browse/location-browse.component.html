@@ -1,0 +1,47 @@
+<ns-side-drawer>
+    <StackLayout class="m-t-5">
+        <ActivityIndicator *ngIf="loadingLocation" busy="true"></ActivityIndicator>
+
+        <StackLayout *ngIf="!loadingLocation">
+            <Label *ngIf="failureLocation"
+                class="h4 text-center text-danger"
+                [text]="failureLocationMessage"
+            ></Label>
+
+            <StackLayout *ngIf="!failureLocation">
+                <Label *ngIf="!mapMarkerSelected && !currentLocation"
+                    class="h4 text-center"
+                    [text]="unknownLocationMessage"
+                ></Label>
+
+                <Label *ngIf="mapMarkerSelected && !location"
+                    class="h4 text-center"
+                    [text]="unknownLocationMessage"
+                ></Label>
+
+                <Label *ngIf="!(
+                    (!mapMarkerSelected && !currentLocation)
+                    || (mapMarkerSelected && !location)
+                )"
+                    class="h4 text-center"
+                    text="Use the map to find a location."
+                ></Label>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout class="m-t-5">
+        <RadAutoCompleteTextView #locationSearch
+            completionMode="Contains"
+            displayMode="Token"
+            suggestMode="suggest"
+            (tokenSelected)="onSuggestionSelect($event)"
+        ></RadAutoCompleteTextView>
+        <MapView #locationMap
+            [latitude]="currentLocationLatitude"
+            [longitude]="currentLocationLongitude"
+            [zoom]="initialZoom"
+            (markerSelect)="onMarkerSelect($event)"
+        ></MapView>
+    </StackLayout>
+</ns-side-drawer>

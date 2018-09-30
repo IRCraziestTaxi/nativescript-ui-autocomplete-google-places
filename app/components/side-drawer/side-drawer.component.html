@@ -1,0 +1,14 @@
+<ActionBar [title]="appTitle" class="action-bar">
+    <ActionItem (tap)="toggleSideDrawer()">
+        <Button text="Menu"></Button>
+    </ActionItem>
+</ActionBar>
+<RadSideDrawer>
+    <StackLayout tkDrawerContent class="page">
+        <Label class="h3 m-20" text="Home" [nsRouterLink]="['/']"></Label>
+        <Label class="h3 m-20" text="Find Places" [nsRouterLink]="['/locations', 'browse']"></Label>
+    </StackLayout>
+    <StackLayout class="page" tkMainContent>
+        <ng-content></ng-content>
+    </StackLayout>
+</RadSideDrawer>

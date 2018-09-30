@@ -1,0 +1,49 @@
+{
+  "description": "Testing the use of Nativescript's RadAutoCompleteTextView with Google's Places API.",
+  "private": true,
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "N/A",
+  "repository": "https://github.com/IRCraziestTaxi/nativescript-ui-autocomplete-google-places",
+  "nativescript": {
+    "id": "org.nativescript.RadAutoCompletePlaces",
+    "tns-android": {
+      "version": "4.2.0"
+    }
+  },
+  "dependencies": {
+    "@angular/animations": "~6.1.3",
+    "@angular/common": "~6.1.3",
+    "@angular/compiler": "~6.1.3",
+    "@angular/core": "~6.1.3",
+    "@angular/forms": "~6.1.3",
+    "@angular/http": "~6.1.3",
+    "@angular/platform-browser": "~6.1.3",
+    "@angular/platform-browser-dynamic": "~6.1.3",
+    "@angular/router": "~6.1.3",
+    "nativescript-angular": "~6.1.0",
+    "nativescript-exit": "^1.0.1",
+    "nativescript-geolocation": "^4.3.0",
+    "nativescript-google-maps-sdk": "^2.6.1",
+    "nativescript-theme-core": "~1.0.4",
+    "nativescript-toast": "^1.4.6",
+    "nativescript-ui-autocomplete": "^3.9.0",
+    "nativescript-ui-sidedrawer": "^4.0.0",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~6.2.2",
+    "tns-core-modules": "^4.2.0",
+    "uikit": "^3.0.0-rc.9-dev.bd39d353",
+    "zone.js": "~0.8.2"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "lazy": "1.0.11",
+    "nativescript-dev-sass": "^1.3.5",
+    "nativescript-dev-typescript": "~0.7.2",
+    "typescript": "^3.1.1",
+    "vinyl-paths": "^2.1.0"
+  }
+}
