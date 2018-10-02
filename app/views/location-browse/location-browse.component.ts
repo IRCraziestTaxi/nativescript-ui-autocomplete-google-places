@@ -52,7 +52,12 @@ export class LocationBrowseComponent implements OnInit {
         this._search.nativeElement.loadSuggestionsAsync = (search: string) => {
             // return this.searchLocations(search);
             return new Promise<any[]>((resolve: (val: any[]) => void) => {
-                resolve([]);
+                const suggestions: TokenModel[] = [
+                    new TokenModel("Item 1", null),
+                    new TokenModel("Item 2", null)
+                ];
+                // resolve([]);
+                resolve(suggestions);
             });
         };
     }
